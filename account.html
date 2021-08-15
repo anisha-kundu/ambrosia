@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=0.5">
+		<link rel="stylesheet" href="styles.css">
+		<script type="module" src="script.js"></script>
+		<link rel="shortcut icon" type="image/jpg" href="pug.png"/>
+		<title>Account</title>
+		
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Work+Sans:wght@500&display=swap" rel="stylesheet">
+	</head>
+
+	<body>
+		<nav>
+			<a href='index'>Home</a>
+			<a onclick='logout()'>Logout</a>
+		</nav>
+		<main>
+			{{#private}}
+			<div>
+				<h2 style="margin-top: 8vw;">Your Account</h2>
+				<h3>{{username}}</h3>
+				<img src='{{avatar}}'>
+			</div>
+			
+			<input type="text" id="search" onkeyup="search()" placeholder="Search for names..." title="search">
+
+<table id="myTable" style="color: white;">
+  <tr class="header">
+    <td>Name</td>
+    <td>Due Date</td>
+    <td>Time Needed</td>
+    <td>Details</td>
+  </tr>
+</table>
+
+<br>
+<!--<form action='/~/homepage/account/Apply_Data' method='POST' enctype='multipart/form-data'> -->
+<div>
+	<input type='text' id='cellOne' class="input-field" name="name" placeholder="Name" required/>
+	<input type='text' id='cellTwo' class="input-field" name="due_date" placeholder="Due Date"/>
+	<input type='text' id='cellThree' class="input-field" name="time_needed" placeholder="Time Needed"/>
+	<input type='text' id='cellFour' class="input-field" name="details" placeholder="Details"/>
+	
+	<input type='submit' name="addRow" class="submit" onclick="tryIt()" value="Submit"/>
+</div>
+<!--</form> -->
+		
+			{{/private}}
+			
+			{{^private}}
+				<script>
+					location.href = 'index';
+				</script>
+			{{/private}}
+			
+		</main>
+		<footer>
+			© 2021 Ambrosia
+		</footer>
+	</body>
+
+</html>

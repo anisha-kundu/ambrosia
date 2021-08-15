@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=0.5">
+		<link rel="stylesheet" href="styles.css">
+		<script type="module" src="script.js"></script>
+		
+		<link rel="shortcut icon" type="image/jpg" href="pug.png"/>
+		<title>Ambrosia</title>
+		
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Work+Sans:wght@500&display=swap" rel="stylesheet">
+	</head>
+
+	<body>
+		<nav>
+			{{^private}}
+				<a href='login'>Login</a>
+				<a href='signup'>Signup</a>
+			{{/private}}
+			
+			{{#private}}
+				<a href='account'>
+					<img src='{{avatar}}'>
+				</a>
+				<a onclick='logout()'>Logout</a>
+			{{/private}}
+		</nav>
+		<main>
+			<!-- Canva iFrame -->
+			<div style="position: relative; width: 100%; height: 0; padding-top: 48.1481%; padding-bottom: 48px; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-bottom: 4.3vw; overflow: hidden; border-radius: 8px; will-change: transform;">
+				<iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;" src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAEnEwb0f0o&#x2F;view?embed"></iframe>
+			</div>
+			
+		</main>
+		<footer>
+			© 2021 Ambrosia
+		</footer>
+	</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=0.5">
+		<link rel="stylesheet" href="styles.css">
+		<script type="module" src="script.js"></script>
+		<link rel="shortcut icon" type="image/jpg" href="pug.png"/>
+		<title>Sign Up!</title>
+		
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Work+Sans:wght@500&display=swap" rel="stylesheet">
+	</head>
+
+	<body>
+		<nav>
+			<a href='index.html'>Home</a>
+			<a href='login.html'>Login</a>
+		</nav>
+		<main>
+			<div>
+				<h2>Sign Up</h2>
+				<form action='/~/homepage/signup' method='POST' enctype='multipart/form-data'>
+					<input type='email' name='username' placeholder='Email' required>
+					<input type='password' name='password' placeholder='Password' required>
+					<label>Add Your Avatar</label>
+					<input type='file' assets='image/*' name='avatar' required>
+					<input type='submit' value='Sign up'>
+					<input type='hidden' name='redirecturl' value='/~/homepage/account'>
+				</form>	
+			</div>
+		</main>
+		<footer>
+			© 2021 Ambrosia
+		</footer>
+	</body>
+
+</html>
